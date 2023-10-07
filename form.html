@@ -6,11 +6,11 @@
     <title>Form</title>
 </head>
 <body>
-    <form name="Registration Form">
-        First Name: <input type="text" name="fname"><br><br>
-        Last Name: <input type="text" name="lname"><br><br>
+    <form name="Registration Form" action="example.php">
+        First Name: <input type="text" name="fname" maxlength="15" placeholder="Enter your name"><br><br>
+        Last Name: <input type="text" name="lname" formnovalidate><br><br>
         E-mail: <input type="email"><br><br>
-        Password: <input type="password"><br><br>
+        Password: <input type="password" required minlength="5" maxlength="10"><br><br>
         DOB <input type="date"><br><br>
         Time <input type="time"><br><br>
         Pune <input type="checkbox" name="location">
@@ -19,6 +19,7 @@
         Gandhinagar <input type="checkbox" name="location"><br><br>
         Male <input type="radio" name="gender">
         Female <input type="radio" name="gender"><br><br>
+      
         <input type="text" list="Programming">
         <datalist id="Programming">
             <option value="C"></option>
@@ -27,8 +28,23 @@
             <option value="HTML"></option>
             <option value="CSS"></option>
         </datalist>
-            
+      
+        <select multiple>
+            <optgroup label="Programming Language">
+                <option value="C">C Programming</option>
+                <option value="C++">C++ Programming</option>
+                <option value="Java">Java Programming</option>
+            </optgroup>
+            <optgroup label="Web designing">
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+            </optgroup>
+        </select><br><br>
+      
+        Number <input type="number" min="5" max="15" step="3"><br><br>
         <input type="button" value="login"><br><br>
+        <input type="submit">
+        <input type="reset">
     </form>
 </body>
 </html>
