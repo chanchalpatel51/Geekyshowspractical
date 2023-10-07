@@ -6,11 +6,11 @@
     <title>Form</title>
 </head>
 <body>
-    <form name="Registration Form">
-        First Name: <input type="text" name="fname"><br><br>
-        Last Name: <input type="text" name="lname"><br><br>
+    <form name="Registration Form" action="example.php">
+        First Name: <input type="text" name="fname" maxlength="15" placeholder="Enter your name"><br><br>
+        Last Name: <input type="text" name="lname" formnovalidate><br><br>
         E-mail: <input type="email"><br><br>
-        Password: <input type="password"><br><br>
+        Password: <input type="password" required minlength="5" maxlength="10"><br><br>
         DOB <input type="date"><br><br>
         Time <input type="time"><br><br>
         Pune <input type="checkbox" name="location">
@@ -25,7 +25,10 @@
             <option value="Java">Java Programming</option>
             <option value="HTML">HTML Programming</option>
         </select><br><br>
+        Number <input type="number" min="5" max="15" step="3"><br><br>
         <input type="button" value="login"><br><br>
+        <input type="submit">
+        <input type="reset">
     </form>
 </body>
 </html>
