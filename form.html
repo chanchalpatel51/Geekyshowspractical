@@ -7,10 +7,10 @@
 </head>
 <body>
     <form name="Registration Form" action="example.php">
-        First Name: <input type="text" name="fname"><br><br>
+        First Name: <input type="text" name="fname" maxlength="15"><br><br>
         Last Name: <input type="text" name="lname" formnovalidate><br><br>
         E-mail: <input type="email"><br><br>
-        Password: <input type="password" required><br><br>
+        Password: <input type="password" required minlength="5" maxlength="10"><br><br>
         DOB <input type="date"><br><br>
         Time <input type="time"><br><br>
         Pune <input type="checkbox" name="location">
